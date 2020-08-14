@@ -1,0 +1,177 @@
+
+body{
+	background-color:white;
+	background-size: cover;
+    background-attachment: fixed;
+
+  	margin: 0;
+	padding: 0;
+}	
+
+
+/*navigation starts here*/
+
+header{
+	text-align:center;
+background:rgba(102,153,153,.78);
+	margin:0px;
+	padding:0px;
+	width:100%;
+	position:fixed;
+	z-index: 999;
+
+}
+.brand{
+	height:70px;
+	width:90px;
+	position:relative;
+	
+	margin-left:20px;
+	float: left;
+
+	padding:0px;
+	margin-bottom: -30px;
+	margin-right: 40px;
+	margin-top: -35px;
+	  
+	  
+}
+.button{
+		float: right;
+		margin-right: 40px;
+		height:40px;
+		margin-top: -60px;
+		color:white;
+		background: red;
+		font-size: 20px;
+
+}
+
+.title
+{
+
+
+    color: #ffa64d!important;
+    font-weight: bold !important;
+    padding-right: 1em;
+    padding-left: 30px;
+}
+h1{
+	text-align:center;
+}
+nav{
+	position:absolute;
+	text-align:left;
+	top:100%;
+	left:0;
+	padding:0px;
+	background:url(file:///C:/Users/Dell/Desktop/mn/admin.jpg) no-repeat;
+	width:100%;
+	transform:scale(1,0);
+	transform-origin:top;
+	transition:transform 400ms ease-in-out;	
+}
+
+nav ul{
+
+	list-style:none;
+	padding:0px;
+	margin:3px;
+	
+
+}
+nav li{
+		margin:20px;
+	
+}
+nav a{
+	margin:0px;
+	padding:0px;
+	color:#b7ae98;
+	font-size: 1.2rem;
+	text-decoration: none;
+	opacity:0;
+	transition:opacity 150ms ease-in-out;	
+}
+
+nav a:hover{
+	color:orange;
+	transition:none;
+}
+
+.nav-toggle{
+	display:none;
+}
+
+.nav-toggle-label{
+	position:absolute;
+	top:0;
+    left:0;
+	margin-left: 1em;
+	height:100%;
+	display: flex;
+	align-items:center;
+
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+
+	display:block;
+	background:white;
+	height:2px;
+	width:2em;
+	border-radius:2px;
+	position:relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+
+		content:'';
+		position:absolute;
+
+	}
+
+
+.nav-toggle-label span::before
+{
+	bottom:7px;
+
+}
+.nav-toggle-label span::after{
+	top:7px;
+
+}
+
+.nav-toggle:checked ~ nav{
+	transform:scale(1,1);
+	
+}
+.nav-toggle:checked ~ nav a{
+	opacity:1;
+	transition:opacity 250ms ease-in-out 250ms;
+}
+
+
+section{
+	padding:50px;
+	margin:10px;
+
+}
+
+.content{
+	position:absolute;
+
+}
+
+.p1{
+
+		margin:40px;
+		padding:0px;
+}
+
+.h1{
+	color:green;
+	text-decoration: underline;
+}

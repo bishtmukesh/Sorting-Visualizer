@@ -1,0 +1,106 @@
+<!Doctype html>
+<html>
+<head><title>BUBBLE SORT</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="bubble.css" type="text/css" >
+</head>
+
+<body>
+
+	<header class="title">
+	
+		<h1 class="title">BUBBLE SORTING</h1>
+	<span class="brand">
+		<img class="brand" src="../images/brand.png" alt="brand.png">
+	</span>	
+	<a href="../index.html"><input class="button" type="button" value="Home"></a>
+	
+		<input type="checkbox" class="nav-toggle title" id="nav-toggle" >
+		<nav>
+			<ul>
+
+				<li><a href="mergesort.html" alt=""> MERGE SORTING </a> </li>
+				<li><a href="selectionsort.html" > SELECTION SORT </a> </li>
+				<li><a href="Bubble_sort.html " > BUBBLE SORT </a> </li>
+				<li><a href="insertion.html" > INSERTION SORT </a> </li>
+				<li><a href="mainpage.html">SORTING</a></li>
+			</ul>	
+		</nav>	
+		<label for="nav-toggle" class="nav-toggle-label" id="nav-toggle-label">
+			<span> </span>
+		</label>
+
+
+	</header>
+
+<section class="content">
+	
+		<p class="p1">
+					<h1 class="h1">    </h1>
+			Bubble sort is a simple sorting algorithm. This sorting algorithm is comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order. This algorithm is not suitable for large data sets as its average and worst case complexity are of 
+			Ο(n2) where n is the number of items.
+		</p>
+		<p class="p1">
+			<h1 class="h1">How Bubble sort works?</h1>
+			Instead of searching an array as a whole, the bubble sort works by comparing adjacent pairs of objects in the array.  If the objects are not in the correct ordered, they are swapped so that the largest of the two moves up.  This process continues until the largest of the objects, eventually "bubbles" up to the highest position in the array.  After this occurs, the search for the  next largest object begins.  The swapping continues until the whole array is in the correct order.
+
+			<ul><br>
+				<li> Starting from the first index, compare the first and the second elements.If the first element is greater than the second element, they are swapped.<br>
+				Now, compare the second and the third elements. Swap them if they are not in order.<br>
+				The above process goes on until the last element.</li>
+			</ul>
+			<img src="../images/step0.png">
+				
+				<ul><li>The same process goes on for the remaining iterations. After each iteration, the largest element among the unsorted elements is placed at the end.<br>
+				In each iteration, the comparison takes place up to the last unsorted element.<br>
+				The array is sorted when all the unsorted elements are placed at their correct positions.</li></ul>
+			<ul><img class="im" src="../images/step1.png"><br></ul>
+					<ul><img class="im" src="../images/step2.png"><br></ul>
+					<ul><img src="../images/step2.png"><br></ul>
+		</p>
+<h2 style="color:green">Program to Implement
+ Bubble Sort</h2>
+ // Bubble sort in C
+<p>
+	<div class="program">
+ <pre>
+#include &ltstdio.h&gt
+void bubbleSort(int array[], int size)
+{
+ for (int step = 0; step < size - 1; ++step)
+  {
+   for (int i = 0; i < size - step - 1; ++i)
+    {
+     // To sort in descending order,change">" to "<".
+    if (array[i] > array[i + 1])
+    {
+     int temp = array[i];
+     array[i] = array[i + 1];
+     array[i + 1] = temp;
+  nuu.   }
+   }
+ }
+}
+   
+void printArray(int array[], int size)
+{
+ for (int i = 0; i < size; ++i)
+  {
+   printf("%d  ", array[i]);
+  }
+printf("\n");
+}
+ 
+int main()
+{
+ int data[] = {-2, 45, 0, 11, -9};
+ int size = sizeof(data) / sizeof(data[0]);
+ bubbleSort(data, size);
+ printf("Sorted Array in Ascending Order:\n");
+ printArray(data, size);
+}
+</pre>
+</div>
+</p>
+.</section>
